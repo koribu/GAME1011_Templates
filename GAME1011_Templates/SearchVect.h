@@ -47,7 +47,7 @@ int SearchableVector<T>::findItem(T item)
 		}
 		if(min == max)
 		{
-			//return -1;
+			return -1;
 		}
 
 	}

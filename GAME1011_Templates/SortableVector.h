@@ -15,7 +15,7 @@ public:
 template <class T>
 void SortableVector<T>::sortVector()
 {
-	T first, second,temp;
+	T temp;
 
 	for (int i = 0; i < this->size(); ++i)
 	{
