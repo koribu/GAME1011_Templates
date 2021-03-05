@@ -27,7 +27,7 @@ int SearchableVector<T>::findItem(T item)
 	//	}
 	//}
 	//return -1;
-	int sub = this->size() / 2 ,min =0,max = this->size() / 2;
+	int sub = this->size() / 2 ,min =0,max = this->size();
 	while(true)
 	{
 		
@@ -47,7 +47,7 @@ int SearchableVector<T>::findItem(T item)
 		}
 		if(min == max)
 		{
-			return -1;
+			//return -1;
 		}
 
 	}

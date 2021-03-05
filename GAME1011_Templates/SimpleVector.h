@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<cstdlib>;
+
 using namespace std;
 
 template <class T>
@@ -15,21 +16,12 @@ public:
 	SimpleVector(const SimpleVector&); //copy Constructor
 	~SimpleVector();
 
-
 	void pushBack(T);
 	void popBack();
 	
 	int size() const
 	{
 		return arraySize;
-	}
-	void sizeUp()
-	{
-		arraySize++;
-	}
-	void sizeDown()
-	{
-		arraySize--;
 	}
 
 	T& operator[](int);
@@ -72,15 +64,25 @@ SimpleVector<T>::~SimpleVector()
 template <class T>
 void SimpleVector<T>::pushBack(T obj)
 {
-	sizeUp();
+	T* temp = new T[this->size() +1];
+	
+	for(int i =0;i<this->size();i++)
+	{
+		temp[i] = aptr[i];
+	}
+	
+	delete[] aptr;
+	arraySize++;	
+	aptr = temp;
+
+	aptr[arraySize - 1] = obj;
 	
 }
 
 template <class T>
 void SimpleVector<T> ::popBack()
 {
-	delete aptr[size() - 1];
-	sizeDown();
+	arraySize--;
 }
 
 template <class T>
