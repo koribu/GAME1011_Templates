@@ -6,7 +6,7 @@ class SearchableVector :public SimpleVector<T>
 {
 public:
 	SearchableVector(int s) :SimpleVector<T>(s){ }
-	SearchableVector(SearchableVector&); //copy constructor
+	SearchableVector(SearchableVector& obj) :SimpleVector<T>(obj) { } //copy constructor
 	SearchableVector(SimpleVector<T>& obj): SimpleVector<T>(obj){ }
 	int findItem(T);
 	

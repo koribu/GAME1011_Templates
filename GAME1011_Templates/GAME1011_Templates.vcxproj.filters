@@ -21,9 +21,15 @@
     <ClInclude Include="SearchVect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SortableVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
